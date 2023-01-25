@@ -37,7 +37,8 @@ const theme = {
     danger: '#f37272',
     light: '#ecf0f1',
     dark: '#233240',
-    background: '#f37272',
+    background: '#191919',
+    container: '#2d2d2d',
     text: '#fff',
     link: '#3498db',
 
@@ -47,9 +48,18 @@ const theme = {
   fonts: ['Open Sans', 'Arial', 'Helvetica', 'sans-serif'].join(','),
   fontSizes: {
     small: '.8rem',
-    normal: '1.2rem',
-    large: '1.3rem',
-    title: '1.8rem',
+    normal: '1rem',
+    large: '1.2rem',
+    title: '1.3rem',
+    subtitle: '1.25rem',
+  },
+  breakpoint: { 
+    xs: '0',
+    sm: '579 px',
+    md: '768 px',
+    lg: '992 px',
+    xl: '1200 px',
+    xxl: '1400 px',
   },
 };
 
