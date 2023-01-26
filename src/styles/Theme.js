@@ -53,13 +53,13 @@ const theme = {
     title: '1.3rem',
     subtitle: '1.25rem',
   },
-  breakpoint: { 
+  breakpoints: {
     xs: '0',
-    sm: '579 px',
-    md: '768 px',
-    lg: '992 px',
-    xl: '1200 px',
-    xxl: '1400 px',
+    sm: '576px',
+    md: '768px',
+    lg: '992px',
+    xl: '1200px',
+    xxl: '1400px',
   },
 };
 
