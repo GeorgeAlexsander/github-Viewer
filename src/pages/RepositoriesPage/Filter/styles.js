@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -19,7 +20,7 @@ export const Selector = styled.button`
   align-items: center;
   justify-content: space-between;
   background: ${(props) => props.theme.colors.container};
-  color: ${(props) =>  props.color || props.theme.colors.text};
+  color: ${(props) => props.color || props.theme.colors.text};
   width: 100%;
   min-height: 2rem;
   border: none;
@@ -29,11 +30,11 @@ export const Selector = styled.button`
   padding: 0 1rem;
   &:hover,
   &.selected {
-    background:  ${(props) => props.color || props.theme.colors.light};
-    color: ${(props) => props.color ? props.theme.colors.white : props.theme.colors.black};
+    background: ${(props) => props.color || props.theme.colors.light};
+    color: ${(props) =>
+      props.color ? props.theme.colors.white : props.theme.colors.black};
     transform: translateX(5px) scale(1.02);
-
-    }
+  }
 
   @media screen and (max-width: ${(props) => props.theme.breakpoints.md}) {
     border-radius: 20px;
@@ -51,8 +52,8 @@ export const Cleaner = styled.button`
   text-align: left;
   padding: 1rem;
 
-  &:hover{
-    color: rgba(255,255,255,0.5)
+  &:hover {
+    color: rgba(255, 255, 255, 0.5);
   }
 
   @media screen and (max-width: ${(props) => props.theme.breakpoints.md}) {
