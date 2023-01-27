@@ -5,6 +5,8 @@ import Repositories from './Repositories';
 
 import { Container, Sidebar, Main } from './styles';
 
+import { getLangsFrom } from '../../services/api';
+
 const RepositoriesPage = () => {
   const user = {
     login: 'GeorgeAlexsander',
@@ -19,30 +21,42 @@ const RepositoriesPage = () => {
 
   const repositories = [
     {
+      id: '1',
+      name: 'Repo 0',
+      description: 'descrição',
+      html_url: 'www.pudim.com',
+      language: 'Javascript',
+    },
+    {
+      id: '2',
       name: 'Repo 1',
       description: 'descrição',
       html_url: 'www.pudim.com',
       language: 'Javascript',
     },
     {
+      id: '3',
       name: 'Repo 2',
       description: 'descrição',
       html_url: 'www.pudim.com',
       language: 'Javascript',
     },
     {
+      id: '4',
       name: 'Repo 3',
       description: 'descrição',
       html_url: 'www.pudim.com',
-      language: 'C++',
+      language: 'Ruby',
     },
     {
+      id: '5',
       name: 'Repo 4',
       description: 'descrição',
       html_url: 'www.pudim.com',
-      language: 'Python',
+      language: 'Ruby',
     },
     {
+      id: '6',
       name: 'Repo 5',
       description: 'descrição',
       html_url: 'www.pudim.com',
@@ -50,12 +64,7 @@ const RepositoriesPage = () => {
     },
   ];
 
-  // calculo dos filters
-  const languages = [
-    { name: 'Javascript', count: 2, color: '#f1c40f' },
-    { name: 'C++', count: 2, color: '#95a5a6' },
-    { name: 'Python', count: 1, color: '#3498db' },
-  ];
+  const languages = getLangsFrom(repositories);
 
   return (
     <Container>
