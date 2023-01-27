@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import { PropTypes } from 'prop-types';
 import { MdGroup, MdLink, MdLocationCity, MdWork } from 'react-icons/md';
