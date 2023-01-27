@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -19,7 +20,6 @@ export const Avatar = styled.img`
   border-radius: 50%;
   width: 70%;
   margin: 1rem;
-
 
   @media screen and (max-width: ${(props) => props.theme.breakpoints.md}) {
     width: 150px;
