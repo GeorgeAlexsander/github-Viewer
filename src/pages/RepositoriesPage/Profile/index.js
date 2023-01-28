@@ -7,16 +7,16 @@ import { Container, Header, Avatar, Login, Name, Inner, Data } from './styles';
 const Profile = ({ user }) => (
   <Container>
     <Header>
-      <Avatar src="https://avatars.githubusercontent.com/u/111101371?v=4" />
+      <Avatar src={user.avatar_url} />
       <Login>{user.login}</Login>
-      <Name>{user.name}</Name>
+      {user.name && <Name>{user.name}</Name>}
     </Header>
     <Inner>
       <Data>
         <MdGroup size={20} />
-        {user.following}&nbsp;<i>seguidores</i>&nbsp;&middot;&nbsp;
+        {user.following}&nbsp;<i>Seguindo</i>&nbsp;&middot;&nbsp;
         {user.followers}
-        <i>&nbsp;seguindo</i>
+        <i>&nbsp;Seguidores</i>
       </Data>
       {user.company && (
         <Data>
@@ -41,7 +41,7 @@ const Profile = ({ user }) => (
 Profile.propTypes = {
   user: PropTypes.shape({
     login: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
+    name: PropTypes.string,
     avatar_url: PropTypes.string.isRequired,
     followers: PropTypes.number.isRequired,
     following: PropTypes.number.isRequired,

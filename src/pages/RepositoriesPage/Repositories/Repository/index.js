@@ -12,7 +12,9 @@ const Repository = ({ repository }) => {
   return (
     <Container color={color}>
       <Name>{repository.name}</Name>
-      <Description>{repository.description}</Description>
+      {repository.description && (
+        <Description>{repository.description}</Description>
+      )}
       <Footer color={color}>
         <Lang>{repository.language}</Lang>
         <Link href={repository.html_url} target="_blank">
@@ -27,7 +29,7 @@ Repository.propTypes = {
   repository: PropTypes.shape({
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
+    description: PropTypes.string,
     html_url: PropTypes.string.isRequired,
     language: PropTypes.string,
   }).isRequired,
