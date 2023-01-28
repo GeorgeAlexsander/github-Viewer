@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Container, Description, Footer, Lang, Link, Name } from './styles';
+import { Container, Name, Description, Footer, Lang, Link } from './styles';
 
 import { langColors } from '../../../../services/config';
 

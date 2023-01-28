@@ -8,8 +8,8 @@ const Profile = ({ user }) => (
   <Container>
     <Header>
       <Avatar src="https://avatars.githubusercontent.com/u/111101371?v=4" />
-      <Login>user.login</Login>
-      <Name>user.name</Name>
+      <Login>{user.login}</Login>
+      <Name>{user.name}</Name>
     </Header>
     <Inner>
       <Data>
@@ -41,6 +41,7 @@ const Profile = ({ user }) => (
 Profile.propTypes = {
   user: PropTypes.shape({
     login: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
     avatar_url: PropTypes.string.isRequired,
     followers: PropTypes.number.isRequired,
     following: PropTypes.number.isRequired,

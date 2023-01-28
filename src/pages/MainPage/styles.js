@@ -13,7 +13,7 @@ export const Container = styled.div`
 
 export const Logo = styled.img`
   width: 150px;
-  `;
+`;
 
 export const Title = styled.h1`
   font-size: 2.2rem;
@@ -29,7 +29,7 @@ export const Form = styled.div`
 `;
 
 export const Input = styled.input`
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
   width: 100%;
   height: 64px;
   line-height: 64px;
@@ -38,7 +38,7 @@ export const Input = styled.input`
   margin-right: 24px;
   padding: 0 24px;
 
-  &::placeholder{
+  &::placeholder {
     color: ${(props) => props.theme.colors.metalDark};
   }
 `;
@@ -54,7 +54,7 @@ export const Button = styled(Link)`
   border: 3px solid ${(props) => props.theme.colors.text};
   transition: backgroud 0.3s;
 
-  &::hover{
+  &::hover {
     background: ${(props) => props.theme.colors.container};
   }
 `;
